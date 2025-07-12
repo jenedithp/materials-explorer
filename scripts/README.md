@@ -1,5 +1,28 @@
-# Scripts
+# Scripts Configuration
 
+**Before using these scripts, you MUST edit the following:**
+
+## copy_job_scripts_template.sh
+- Line ~37: Set your VASP binary path
+- Line ~38: Set your Intel OneAPI path  
+- Line ~12: Set your SLURM account name
+
+## generate_potcar_template.sh
+- Line 6: Set your VASP pseudopotential directory path
+
+## Example Configurations:
+```bash
+# For typical academic clusters:
+export PATH=${HOME}/vasp/bin:$PATH
+source /opt/intel/oneapi/setvars.sh
+
+# For NERSC:
+module load vasp
+export POTCAR_PATH=$VASP_PSEUDOPOTENTIALS
+
+---
+
+#Scripts
 ## Bash Scripts
 
 ### update_all_magmom.sh
